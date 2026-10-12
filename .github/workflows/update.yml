@@ -28,18 +28,27 @@ jobs:
           python-version: "3.12"
 
       - name: Update stock data
-        run: python update_stocks.py
+        id: stocks
+        continue-on-error: true
+        run: python -u update_stocks.py
 
       - name: Update institutional chips
-        run: python update_chips.py
+        id: chips
+        continue-on-error: true
+        run: python -u update_chips.py
 
-      - name: Commit JSON data
-        if: success()
+      - name: Commit available JSON data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/ chips/
+          if [ "${{ steps.stocks.outcome }}" = "success" ]; then
+            git add data/
+          fi
+
+          if [ "${{ steps.chips.outcome }}" = "success" ]; then
+            git add chips/
+          fi
 
           if ! git diff --cached --quiet; then
             git commit -m "Update daily stock and chip data"
@@ -47,4 +56,15 @@ jobs:
           else
             echo "No changes to commit"
           fi
-          
+
+      - name: Verify update results
+        if: always()
+        run: |
+          echo "Stock result: ${{ steps.stocks.outcome }}"
+          echo "Chip result: ${{ steps.chips.outcome }}"
+
+          if [ "${{ steps.stocks.outcome }}" != "success" ] ||
+             [ "${{ steps.chips.outcome }}" != "success" ]; then
+            echo "One or more update scripts failed"
+            exit 1
+          fi
