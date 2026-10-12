@@ -1,17 +1,22 @@
+
 name: Update Taiwan Stocks
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 19 * * 1-5"
-      timezone: "Asia/Taipei"
+    - cron: "0 11 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-taiwan-stocks
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -25,12 +30,21 @@ jobs:
       - name: Update stock data
         run: python update_stocks.py
 
+      - name: Update institutional chips
+        run: python update_chips.py
+
       - name: Commit JSON data
+        if: success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
+
+          git add data/ chips/
+
           if ! git diff --cached --quiet; then
-            git commit -m "Update daily OHLCV"
+            git commit -m "Update daily stock and chip data"
             git push
+          else
+            echo "No changes to commit"
           fi
+          
