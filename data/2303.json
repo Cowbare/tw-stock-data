@@ -3,26 +3,10 @@
   "name": "聯電",
   "source": "TWSE STOCK_DAY",
   "adjusted": false,
-  "generated_at": "2026-10-12T13:27:56.698174+08:00",
-  "latest_date": "2026-10-08",
+  "generated_at": "2026-10-12T21:11:08.371914+08:00",
+  "latest_date": "2026-10-12",
   "count": 120,
   "rows": [
-    {
-      "date": "2026-04-17",
-      "open": 68.3,
-      "high": 74.8,
-      "low": 67.6,
-      "close": 73.0,
-      "volume_shares": 497159388,
-      "volume_lots": 497159.388,
-      "ma5": null,
-      "ma10": null,
-      "ma20": null,
-      "ma60": null,
-      "high20": null,
-      "low20": null,
-      "avg_volume20": null
-    },
     {
       "date": "2026-04-20",
       "open": 78.0,
@@ -79,7 +63,7 @@
       "close": 73.6,
       "volume_shares": 231697954,
       "volume_lots": 231697.954,
-      "ma5": 75.66,
+      "ma5": null,
       "ma10": null,
       "ma20": null,
       "ma60": null,
@@ -160,7 +144,7 @@
       "volume_shares": 333288108,
       "volume_lots": 333288.108,
       "ma5": 74.82,
-      "ma10": 75.24,
+      "ma10": null,
       "ma20": null,
       "ma60": null,
       "high20": null,
@@ -321,11 +305,11 @@
       "volume_lots": 413940.731,
       "ma5": 103.18,
       "ma10": 95.94,
-      "ma20": 85.59,
+      "ma20": null,
       "ma60": null,
-      "high20": 118.0,
-      "low20": 67.6,
-      "avg_volume20": 274726203
+      "high20": null,
+      "low20": null,
+      "avg_volume20": null
     },
     {
       "date": "2026-05-18",
@@ -962,7 +946,7 @@
       "ma5": 155.7,
       "ma10": 161.4,
       "ma20": 159.825,
-      "ma60": 124.263,
+      "ma60": null,
       "high20": 185.5,
       "low20": 136.0,
       "avg_volume20": 220375306
@@ -1926,6 +1910,22 @@
       "high20": 168.5,
       "low20": 135.0,
       "avg_volume20": 176888777
+    },
+    {
+      "date": "2026-10-12",
+      "open": 146.5,
+      "high": 149.0,
+      "low": 144.0,
+      "close": 145.5,
+      "volume_shares": 97412594,
+      "volume_lots": 97412.594,
+      "ma5": 148.3,
+      "ma10": 152.65,
+      "ma20": 150.65,
+      "ma60": 134.05,
+      "high20": 168.5,
+      "low20": 135.0,
+      "avg_volume20": 168227168
     }
   ]
 }
