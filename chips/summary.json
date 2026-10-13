@@ -1,34 +1,34 @@
 {
   "2330": {
     "name": "台積電",
-    "latest_date": "2026-10-12",
+    "latest_date": "2026-10-13",
     "count": 120,
-    "foreign_net_shares": -9422826,
-    "trust_net_shares": 588078,
-    "dealer_net_shares": 1371306
+    "foreign_net_shares": -25641224,
+    "trust_net_shares": 3005324,
+    "dealer_net_shares": 2491739
   },
   "2408": {
     "name": "南亞科",
-    "latest_date": "2026-10-12",
+    "latest_date": "2026-10-13",
     "count": 120,
-    "foreign_net_shares": -2848099,
-    "trust_net_shares": 255000,
-    "dealer_net_shares": 218379
+    "foreign_net_shares": -41445919,
+    "trust_net_shares": -2008000,
+    "dealer_net_shares": -2580163
   },
   "2303": {
     "name": "聯電",
-    "latest_date": "2026-10-12",
+    "latest_date": "2026-10-13",
     "count": 120,
-    "foreign_net_shares": -13540056,
-    "trust_net_shares": 656115,
-    "dealer_net_shares": -1977751
+    "foreign_net_shares": -3004711,
+    "trust_net_shares": 1576727,
+    "dealer_net_shares": -3322731
   },
   "2891": {
     "name": "中信金",
-    "latest_date": "2026-10-12",
+    "latest_date": "2026-10-13",
     "count": 120,
-    "foreign_net_shares": 12452148,
-    "trust_net_shares": 5980000,
-    "dealer_net_shares": 1245338
+    "foreign_net_shares": 16612740,
+    "trust_net_shares": 11722000,
+    "dealer_net_shares": 2240629
   }
 }
